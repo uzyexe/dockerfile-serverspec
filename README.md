@@ -11,9 +11,9 @@ This Docker image is based on the [ruby:2.2.2-slim](https://registry.hub.docker.
 ## Using
 
 ### docker run
-    
-    docker run -it --volume="/root/.ssh/:/root/.ssh:ro" --volume="/serverspec:/serverspec:ro" serverspec:latest rake -T
-    docker run -it --volume="/root/.ssh/:/root/.ssh:ro" --volume="/serverspec:/serverspec:ro" serverspec:latest rake <option>
+
+    docker run -it --volume="/root/.ssh/:/root/.ssh:ro" --volume="/serverspec:/serverspec:ro" uzyexe/serverspec:latest rake -T
+    docker run -it --volume="/root/.ssh/:/root/.ssh:ro" --volume="/serverspec:/serverspec:ro" uzyexe/serverspec:latest rake <option>
 
 --
 
