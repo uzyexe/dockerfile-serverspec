@@ -1,6 +1,6 @@
-FROM ruby:2.2.2-slim
+FROM ruby:2.2.4-slim
 
-ENV SERVERSPEC_VERSION 2.24.3
+ENV SERVERSPEC_VERSION 2.36.0
 
 RUN gem install serverspec -v ${SERVERSPEC_VERSION} && \
     mkdir /serverspec
