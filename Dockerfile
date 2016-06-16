@@ -1,11 +1,10 @@
-FROM ruby:2.2.4-slim
+FROM ruby:2.2.5-slim
 
-ENV SERVERSPEC_VERSION 2.36.0
+ADD Gemfile .
+ADD Gemfile.lock .
+RUN bundle install
 
-RUN gem install serverspec -v ${SERVERSPEC_VERSION} && \
-    mkdir /serverspec
-
-VOLUME  /serverspec
 WORKDIR /serverspec
+VOLUME /serverspec
 
 CMD /usr/local/bin/rake -T
