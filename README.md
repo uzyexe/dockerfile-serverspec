@@ -24,3 +24,11 @@ docker run --rm -v "/serverspec:/serverspec:ro" uzyexe/serverspec rake <option>
 ## serverspec
 
 [Getting started](http://serverspec.org/)
+
+# Authors
+
+* Shuji Yamada (<uzy.exe@gmail.com>)
+
+## License
+
+This project is licensed under the terms of the MIT license.
