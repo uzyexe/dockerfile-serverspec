@@ -1,10 +1,9 @@
-FROM ruby:2.2.5-slim
-
-ADD Gemfile .
-ADD Gemfile.lock .
-RUN bundle install
+FROM ruby:2.2.5-alpine
 
 WORKDIR /serverspec
-VOLUME /serverspec
+
+COPY Gemfile /serverspec/
+COPY Gemfile.lock /serverspec/
+RUN bundle install
 
 CMD /usr/local/bin/rake -T
