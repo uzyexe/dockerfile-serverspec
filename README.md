@@ -1,3 +1,5 @@
+[![](https://badge.imagelayers.io/uzyexe/serverspec:latest.svg)](https://imagelayers.io/?images=uzyexe/serverspec:latest 'Get your own badge on imagelayers.io')
+
 # uzyexe/serverspec
 
 With Serverspec, you can write RSpec tests for checking your servers are configured correctly.
