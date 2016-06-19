@@ -14,8 +14,10 @@ This Docker image is based on the [ruby:2.2.5-alpine](https://hub.docker.com/_/r
 
 ### docker run
 
-    docker run -it --volume="/root/.ssh/:/root/.ssh:ro" --volume="/serverspec:/serverspec:ro" uzyexe/serverspec:latest rake -T
-    docker run -it --volume="/root/.ssh/:/root/.ssh:ro" --volume="/serverspec:/serverspec:ro" uzyexe/serverspec:latest rake <option>
+```
+docker run --rm -v "/serverspec:/serverspec:ro" uzyexe/serverspec rake -T
+docker run --rm -v "/serverspec:/serverspec:ro" uzyexe/serverspec rake <option>
+```
 
 --
 
