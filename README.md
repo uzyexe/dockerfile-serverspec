@@ -12,11 +12,23 @@ This Docker image is based on the [ruby:2.2.5-alpine](https://hub.docker.com/_/r
 
 ## Using
 
+```
+# tree /sample_spec
+
+/sample_spec
+├── Rakefile
+└── spec
+    ├── localhost
+    │   └── sample_spec.rb
+    └── spec_helper.rb
+```
+
 ### docker run
 
 ```
-docker run --rm -v "/serverspec:/serverspec:ro" uzyexe/serverspec rake -T
-docker run --rm -v "/serverspec:/serverspec:ro" uzyexe/serverspec rake <option>
+SPEC_DIR=/sample_spec
+docker run --rm -v "${SPEC_DIR}:/serverspec:ro" uzyexe/serverspec rake -T
+docker run --rm -v "${SPEC_DIR}:/serverspec:ro" uzyexe/serverspec rake <option>
 ```
 
 --
