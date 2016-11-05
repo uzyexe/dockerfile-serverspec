@@ -1,6 +1,6 @@
 [![](https://badge.imagelayers.io/uzyexe/serverspec:latest.svg)](https://imagelayers.io/?images=uzyexe/serverspec:latest 'Get your own badge on imagelayers.io')
 
-# uzyexe/serverspec
+# uzyexe/serverspec [![Circle CI](https://circleci.com/gh/uzyexe/dockerfile-serverspec.svg?style=svg)](https://circleci.com/gh/uzyexe/dockerfile-serverspec)
 
 With Serverspec, you can write RSpec tests for checking your servers are configured correctly.
 
@@ -8,7 +8,7 @@ With Serverspec, you can write RSpec tests for checking your servers are configu
 
 [**Trusted Build**](https://hub.docker.com/r/uzyexe/serverspec/)
 
-This Docker image is based on the [ruby:2.2.5-alpine](https://hub.docker.com/_/ruby/) base image.
+This Docker image is based on the [ruby:2.3.1-alpine](https://hub.docker.com/_/ruby/) base image.
 
 ## Using
 
