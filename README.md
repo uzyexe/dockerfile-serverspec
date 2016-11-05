@@ -1,6 +1,6 @@
 [![](https://badge.imagelayers.io/uzyexe/serverspec:latest.svg)](https://imagelayers.io/?images=uzyexe/serverspec:latest 'Get your own badge on imagelayers.io')
 
-# uzyexe/serverspec
+# uzyexe/serverspec [![Circle CI](https://circleci.com/gh/uzyexe/dockerfile-serverspec.svg?style=svg)](https://circleci.com/gh/uzyexe/dockerfile-serverspec)
 
 With Serverspec, you can write RSpec tests for checking your servers are configured correctly.
 
