@@ -5,7 +5,7 @@ ENV RAKE_VERSION 11.3.0
 ENV RUBOCOP_VERSION 0.45.0
 
 RUN gem install serverspec -v ${SERVERSPEC_VERSION} \
-    && gem install rake -v ${RAKE_VERSION}
+    && gem install rake -v ${RAKE_VERSION} \
     && gem install rubocop -v ${RUBOCOP_VERSION}
 
 WORKDIR /serverspec
