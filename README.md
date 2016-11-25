@@ -104,6 +104,24 @@ Failed examples:
 rspec ./spec/localhost/sample_spec.rb:27 # Port "80" should be listening
 ```
 
+If you need access to process or network interface you will need --pid="host" or --net="host" or more docker option.
+
+```
+# docker run \
+   --rm \
+   --net="host" \
+   --pid="host" \
+   --ipc="host" \
+   --privileged \
+   --volume="${PWD}/Rakefile:/serverspec/Rakefile:ro" \
+   --volume="$(pwd)/spec:/serverspec/spec:ro" \
+   --volume="/etc/motd:/etc/motd:ro" \
+   --volume="/home/user/.ssh:/home/user/.ssh:ro" \
+   --volume="/var:/var:ro" \
+   --volume="/var/run/docker.sock:/var/run/docker.sock:ro" \
+   uzyexe/serverspec rake <option>
+```
+
 --
 
 ## serverspec
