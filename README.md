@@ -21,13 +21,13 @@ docker run --rm -v "${YOUR_SPEC_DIR}:/serverspec:ro" uzyexe/serverspec rake <opt
 
 ### Tutorial
 
-1. Create your serverspec directory.
+Step 1. Create your serverspec directory.
 
 ```
 # mkdir <your_serverspec_dir>
 ```
 
-2. Initialized serverspec directory.
+Step 2. Initialized serverspec directory.
 
 ```
 # docker run --rm -v $PWD:/serverspec:rw uzyexe/serverspec serverspec-init
@@ -53,7 +53,7 @@ Select number:
 2 directories, 3 files
 ```
 
-3. The following file is generated...
+Step 3. The following file is generated...
 
 ```
 # tree .
@@ -65,14 +65,14 @@ Select number:
     └── spec_helper.rb
 ```
 
-4. Display the task list defined in the Rakefile.
+Step 4. Display the task list defined in the Rakefile.
 
 ```
 # docker run --rm -v $PWD:/serverspec:ro uzyexe/serverspec rake -T
 rake spec:localhost  # Run serverspec tests to localhost
 ```
 
-5. Run serverspec tests to localhost.
+Step 5. Run serverspec tests to localhost.
 
 ```
 # docker run --rm -v $PWD:/serverspec:ro uzyexe/serverspec rake spec:localhost
