@@ -1,10 +1,12 @@
-FROM ruby:2.4.2
+FROM ruby:2.6-alpine
 
-ENV SERVERSPEC_VERSION 2.41.0
-ENV RUBOCOP_VERSION 0.50.0
+ENV SERVERSPEC_VERSION 2.41.3
+ENV RUBOCOP_VERSION 0.67.2
 
-RUN gem install serverspec -v ${SERVERSPEC_VERSION} && \
-    gem install rubocop -v ${RUBOCOP_VERSION}
+RUN apk add --no-cache build-base && \
+    gem install serverspec -v ${SERVERSPEC_VERSION} --no-document && \
+    gem install rubocop -v ${RUBOCOP_VERSION} --no-document && \
+    gem install ed25519 bcrypt_pbkdf --no-document
 
 WORKDIR /serverspec
 
